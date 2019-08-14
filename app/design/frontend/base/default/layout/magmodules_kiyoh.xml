@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>magmodules/kiyoh/sidebar.css</stylesheet></action>
+		</reference>
+		<reference name="left">
+			<block type="kiyoh/sidebar" name="left.kiyoh" template="magmodules/kiyoh/sidebar/left.phtml" />
+		</reference>
+		<reference name="right">
+			<block type="kiyoh/sidebar" name="right.kiyoh" template="magmodules/kiyoh/sidebar/right.phtml" />
+		</reference>
+	</default>
+	<kiyoh_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+		<reference name="head">
+			<action method="addCss"><stylesheet>magmodules/kiyoh/style.css</stylesheet></action>
+		</reference>
+		<reference name="content">
+			<block type="kiyoh/reviews" name="kiyoh.index" template="magmodules/kiyoh/index.phtml" />
+		</reference>
+		<reference name="left">
+			<remove name="left.kiyoh" />
+		</reference>
+		<reference name="right">
+			<remove name="right.kiyoh" />
+		</reference>
+	</kiyoh_index_index>
+	<cms_index_index>
+		<reference name="head">
+			<action method="addCss"><stylesheet>magmodules/kiyoh/richsnippets.css</stylesheet></action>
+		</reference>
+	</cms_index_index>
+</layout> 
